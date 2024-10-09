@@ -1,0 +1,10 @@
+# Ignore specific JSON file
+energy-generation-analysis-bffd27fb246d.json
+
+# Ignore env file
+env
+
+# Optional: Common additions for environment files
+.env
+.env.local
+.env.*

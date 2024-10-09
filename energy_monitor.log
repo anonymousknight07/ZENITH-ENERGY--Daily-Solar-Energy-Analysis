@@ -1,0 +1,72 @@
+2024-10-09 19:16:17,586 - INFO - Starting script and running initial tests...
+2024-10-09 19:16:19,698 - ERROR - Email connection test failed: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-71df0d67c22sm7789054b3a.163 - gsmtp')
+2024-10-09 19:16:19,700 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-09 19:16:19,700 - INFO - Running analysis at 2024-10-09 19:16:19
+2024-10-09 19:16:21,322 - INFO - Attempting to access worksheet: OCT-24
+2024-10-09 19:16:21,712 - ERROR - Error getting Google Sheet data: OCT-24
+2024-10-09 19:16:23,620 - ERROR - Failed to send email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-7e9f6c35ee1sm8500378a12.59 - gsmtp')
+2024-10-09 19:18:40,670 - INFO - 
+Script stopped by user
+2024-10-09 19:19:44,728 - INFO - Starting script and running initial tests...
+2024-10-09 19:19:46,870 - ERROR - Email connection test failed: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-7ea35f50003sm864523a12.91 - gsmtp')
+2024-10-09 19:19:46,872 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-09 19:19:46,872 - INFO - Running analysis at 2024-10-09 19:19:46
+2024-10-09 19:19:47,813 - INFO - Attempting to access worksheet: OCT-24
+2024-10-09 19:19:48,494 - ERROR - Error getting Google Sheet data: OCT-24
+2024-10-09 19:19:50,494 - ERROR - Failed to send email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-7e9f6c35e9esm8347158a12.66 - gsmtp')
+2024-10-09 19:21:39,832 - INFO - 
+Script stopped by user
+2024-10-09 20:10:09,543 - INFO - Starting script and running initial tests...
+2024-10-09 20:10:30,790 - ERROR - Email connection test failed: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:10:30,791 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-09 20:10:30,792 - INFO - Running analysis at 2024-10-09 20:10:30
+2024-10-09 20:10:31,446 - ERROR - Error getting Google Sheet data: APIError: [403]: Google Drive API has not been used in project 974107806487 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=974107806487 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+2024-10-09 20:10:52,491 - INFO - 
+Script stopped by user
+2024-10-09 20:13:02,499 - INFO - Starting script and running initial tests...
+2024-10-09 20:13:23,530 - ERROR - Email connection test failed: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:13:23,531 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-09 20:13:23,532 - INFO - Running analysis at 2024-10-09 20:13:23
+2024-10-09 20:13:24,352 - ERROR - Error getting Google Sheet data: APIError: [403]: Google Drive API has not been used in project 974107806487 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=974107806487 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+2024-10-09 20:13:45,403 - ERROR - Failed to send email: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:14:40,360 - INFO - 
+Script stopped by user
+2024-10-09 20:18:45,875 - INFO - Starting script and running initial tests...
+2024-10-09 20:19:06,914 - ERROR - Email connection test failed: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:19:06,917 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-09 20:19:06,917 - INFO - Running analysis at 2024-10-09 20:19:06
+2024-10-09 20:19:08,688 - INFO - Available spreadsheets: ['All sites']
+2024-10-09 20:19:09,492 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-09 20:19:09,493 - ERROR - Worksheet OCT-24 not found. Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-09 20:19:30,561 - ERROR - Failed to send email: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:19:35,767 - INFO - 
+Script stopped by user
+2024-10-09 20:22:16,651 - INFO - Starting script and running initial tests...
+2024-10-09 20:22:37,757 - ERROR - Email connection test failed: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:22:37,758 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-09 20:22:37,759 - INFO - Running analysis at 2024-10-09 20:22:37
+2024-10-09 20:22:38,897 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-09 20:22:38,900 - INFO - Using worksheet: Oct-24
+2024-10-09 20:22:39,729 - ERROR - Error getting Google Sheet data: 'Plant capacity in KW'
+2024-10-09 20:23:00,774 - ERROR - Failed to send email: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:23:11,346 - INFO - 
+Script stopped by user
+2024-10-09 20:27:04,634 - INFO - Starting script and running initial tests...
+2024-10-09 20:27:25,702 - ERROR - Email connection test failed: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:27:25,703 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-09 20:27:25,703 - INFO - Running analysis at 2024-10-09 20:27:25
+2024-10-09 20:27:27,169 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-09 20:27:27,171 - INFO - Using worksheet: Oct-24
+2024-10-09 20:27:28,007 - ERROR - Error getting Google Sheet data: 'Plant capacity in KW'
+2024-10-09 20:27:49,066 - ERROR - Failed to send email: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:27:53,137 - INFO - 
+Script stopped by user
+2024-10-09 20:27:58,156 - INFO - Starting script and running initial tests...
+2024-10-09 20:28:19,216 - ERROR - Email connection test failed: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 20:28:19,218 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-09 20:28:19,219 - INFO - Running analysis at 2024-10-09 20:28:19
+2024-10-09 20:28:20,436 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-09 20:28:20,438 - INFO - Using worksheet: Oct-24
+2024-10-09 20:28:21,301 - ERROR - Error getting Google Sheet data: 'Plant capacity in KW'
+2024-10-09 20:28:42,341 - INFO - 
+Script stopped by user
