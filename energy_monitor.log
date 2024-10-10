@@ -70,3 +70,132 @@ Script stopped by user
 2024-10-09 20:28:21,301 - ERROR - Error getting Google Sheet data: 'Plant capacity in KW'
 2024-10-09 20:28:42,341 - INFO - 
 Script stopped by user
+2024-10-09 21:20:18,937 - INFO - Starting script and running initial tests...
+2024-10-09 21:20:40,047 - ERROR - Email connection test failed: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-09 21:20:40,048 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-09 21:20:40,048 - INFO - Running analysis at 2024-10-09 21:20:40
+2024-10-09 21:20:41,430 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-09 21:20:41,432 - INFO - Using worksheet: Oct-24
+2024-10-09 21:20:42,226 - ERROR - Error getting Google Sheet data: 'Plant capacity in KW'
+2024-10-09 21:21:03,264 - INFO - 
+Script stopped by user
+2024-10-10 23:05:03,144 - INFO - Starting script and running initial tests...
+2024-10-10 23:05:24,285 - ERROR - Email connection test failed: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-10 23:05:24,285 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-10 23:05:24,285 - INFO - Running analysis at 2024-10-10 23:05:24
+2024-10-10 23:05:25,570 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-10 23:05:25,571 - INFO - Using worksheet: Oct-24
+2024-10-10 23:05:26,565 - ERROR - Error getting Google Sheet data: 'Plant capacity in KW'
+2024-10-10 23:05:47,611 - ERROR - Failed to send email: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2024-10-10 23:06:30,145 - INFO - 
+Script stopped by user
+2024-10-10 23:09:39,814 - INFO - Starting script and running initial tests...
+2024-10-10 23:09:41,544 - INFO - Email connection test successful
+2024-10-10 23:09:41,760 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-10 23:09:41,761 - INFO - Running analysis at 2024-10-10 23:09:41
+2024-10-10 23:09:43,074 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-10 23:09:43,076 - INFO - Using worksheet: Oct-24
+2024-10-10 23:09:43,894 - ERROR - Error getting Google Sheet data: Required columns not found. Capacity col: None, Plant name col: Plant name
+2024-10-10 23:09:47,772 - INFO - Email sent successfully
+2024-10-10 23:10:29,124 - INFO - 
+Script stopped by user
+2024-10-10 23:17:51,542 - INFO - Starting script and running initial tests...
+2024-10-10 23:17:53,178 - INFO - Email connection test successful
+2024-10-10 23:17:53,385 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-10 23:17:53,387 - INFO - Running analysis at 2024-10-10 23:17:53
+2024-10-10 23:17:54,584 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-10 23:17:54,587 - INFO - Using worksheet: Oct-24
+2024-10-10 23:17:55,355 - INFO - Available columns: ['S.no.', 'Plant name', '', '', '10/1/2024', '10/2/2024', '10/3/2024', '10/4/2024', '10/5/2024', '10/6/2024', '10/7/2024', '10/8/2024', '10/9/2024', '10/10/2024', '10/11/2024', '10/12/2024', '10/13/2024', '10/14/2024', '10/15/2024', '10/16/2024', '10/17/2024', '10/18/2024', '10/19/2024', '10/20/2024', '10/21/2024', '10/22/2024', '10/23/2024', '10/24/2024', '10/25/2024', '10/26/2024', '10/27/2024', '10/28/2024', '10/29/2024', '10/30/2024', '', '']
+2024-10-10 23:17:55,356 - INFO - Found plant name column: Plant name
+2024-10-10 23:17:55,358 - ERROR - Error getting Google Sheet data: Required columns not found. Capacity col: None, Plant name col: Plant name
+2024-10-10 23:17:58,800 - INFO - Email sent successfully
+2024-10-10 23:21:51,259 - INFO - 
+Script stopped by user
+2024-10-10 23:21:55,472 - INFO - Starting script and running initial tests...
+2024-10-10 23:21:57,678 - INFO - Email connection test successful
+2024-10-10 23:21:57,889 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-10 23:21:57,889 - INFO - Running analysis at 2024-10-10 23:21:57
+2024-10-10 23:21:59,322 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-10 23:21:59,324 - INFO - Using worksheet: Oct-24
+2024-10-10 23:22:00,133 - INFO - Available columns: ['S.no.', 'Plant name', 'Plant capacity in KW', 'Cummulative generation during Oct-2024', '10/1/2024', '10/2/2024', '10/3/2024', '10/4/2024', '10/5/2024', '10/6/2024', '10/7/2024', '10/8/2024', '10/9/2024', '10/10/2024', '10/11/2024', '10/12/2024', '10/13/2024', '10/14/2024', '10/15/2024', '10/16/2024', '10/17/2024', '10/18/2024', '10/19/2024', '10/20/2024', '10/21/2024', '10/22/2024', '10/23/2024', '10/24/2024', '10/25/2024', '10/26/2024', '10/27/2024', '10/28/2024', '10/29/2024', '10/30/2024', '', '']
+2024-10-10 23:22:00,133 - INFO - Found capacity column: Plant capacity in KW
+2024-10-10 23:22:00,135 - INFO - Found plant name column: Plant name
+2024-10-10 23:22:00,174 - INFO - Successfully retrieved data. Shape: (62, 36)
+2024-10-10 23:22:00,176 - ERROR - Error during analysis: Invalid format string
+2024-10-10 23:22:03,575 - INFO - Email sent successfully
+2024-10-10 23:39:22,281 - INFO - 
+Script stopped by user
+2024-10-10 23:41:20,641 - INFO - Starting script and running initial tests...
+2024-10-10 23:41:22,116 - INFO - Email connection test successful
+2024-10-10 23:41:22,324 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-10 23:41:22,324 - INFO - Running analysis at 2024-10-10 23:41:22
+2024-10-10 23:41:23,515 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-10 23:41:23,518 - INFO - Using worksheet: Oct-24
+2024-10-10 23:41:24,313 - INFO - Available columns: ['S.no.', 'Plant name', 'Plant capacity in KW', 'Cummulative generation during Oct-2024', '10/1/2024', '10/2/2024', '10/3/2024', '10/4/2024', '10/5/2024', '10/6/2024', '10/7/2024', '10/8/2024', '10/9/2024', '10/10/2024', '10/11/2024', '10/12/2024', '10/13/2024', '10/14/2024', '10/15/2024', '10/16/2024', '10/17/2024', '10/18/2024', '10/19/2024', '10/20/2024', '10/21/2024', '10/22/2024', '10/23/2024', '10/24/2024', '10/25/2024', '10/26/2024', '10/27/2024', '10/28/2024', '10/29/2024', '10/30/2024', '', '']
+2024-10-10 23:41:24,314 - INFO - Found capacity column: Plant capacity in KW
+2024-10-10 23:41:24,314 - INFO - Found plant name column: Plant name
+2024-10-10 23:41:24,328 - INFO - Successfully retrieved data. Shape: (62, 36)
+2024-10-10 23:41:24,329 - ERROR - Error during analysis: Invalid format string
+2024-10-10 23:41:24,331 - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive - Student Ambassadors\Desktop\MY FILES\Solar_project\energy_monitor.py", line 246, in analyze_energy_generation
+    today = datetime.now().strftime("%m/%-d/%Y")  # This will format as 10/10/2024
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Invalid format string
+
+2024-10-10 23:41:27,689 - INFO - Email sent successfully
+2024-10-10 23:44:48,827 - INFO - 
+Script stopped by user
+2024-10-10 23:44:53,202 - INFO - Starting script and running initial tests...
+2024-10-10 23:44:53,203 - INFO - Using date format: 10/10/2024
+2024-10-10 23:44:55,430 - INFO - Email connection test successful
+2024-10-10 23:44:55,641 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-10 23:44:55,642 - INFO - Running analysis at 2024-10-10 23:44:55
+2024-10-10 23:44:56,745 - INFO - Available worksheets: ['Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23', 'Jan-24', 'Feb-24', 'March-24', 'April-24', 'May-24', 'June-24', 'July-24', 'Aug-24', 'Sep-24', 'Oct-24', 'Summary']
+2024-10-10 23:44:56,746 - INFO - Using worksheet: Oct-24
+2024-10-10 23:44:57,593 - INFO - Available columns: ['S.no.', 'Plant name', 'Plant capacity in KW', 'Cummulative generation during Oct-2024', '10/1/2024', '10/2/2024', '10/3/2024', '10/4/2024', '10/5/2024', '10/6/2024', '10/7/2024', '10/8/2024', '10/9/2024', '10/10/2024', '10/11/2024', '10/12/2024', '10/13/2024', '10/14/2024', '10/15/2024', '10/16/2024', '10/17/2024', '10/18/2024', '10/19/2024', '10/20/2024', '10/21/2024', '10/22/2024', '10/23/2024', '10/24/2024', '10/25/2024', '10/26/2024', '10/27/2024', '10/28/2024', '10/29/2024', '10/30/2024', '', '']
+2024-10-10 23:44:57,596 - INFO - Found capacity column: Plant capacity in KW
+2024-10-10 23:44:57,596 - INFO - Found plant name column: Plant name
+2024-10-10 23:44:57,608 - INFO - Successfully retrieved data. Shape: (62, 36)
+2024-10-10 23:44:57,609 - INFO - Analyzing data for date: 10/10/2024
+2024-10-10 23:44:57,623 - INFO - Analysis complete. Found 0 low generation sites
+2024-10-10 23:45:00,993 - INFO - Email sent successfully
+2024-10-11 00:34:09,369 - INFO - 
+Script stopped by user
+2024-10-11 00:43:09,349 - INFO - Starting September analysis script...
+2024-10-11 00:43:11,029 - INFO - Email connection test successful
+2024-10-11 00:43:13,387 - INFO - Using worksheet: Sep-23
+2024-10-11 00:43:13,812 - ERROR - Error getting Google Sheet data: name 'capacity_col' is not defined
+2024-10-11 00:43:17,560 - INFO - September report email sent successfully
+2024-10-11 00:43:54,559 - INFO - Starting September analysis script...
+2024-10-11 00:43:56,043 - INFO - Email connection test successful
+2024-10-11 00:43:57,403 - INFO - Using worksheet: Sep-23
+2024-10-11 00:43:57,808 - ERROR - Error getting Google Sheet data: name 'capacity_col' is not defined
+2024-10-11 00:44:02,030 - INFO - September report email sent successfully
+2024-10-11 00:46:14,797 - INFO - Starting September analysis script...
+2024-10-11 00:46:16,412 - INFO - Email connection test successful
+2024-10-11 00:46:17,821 - INFO - Using worksheet: Sep-23
+2024-10-11 00:46:18,237 - INFO - Available columns: ['S.no.', 'Plant name', '', '', '9/1/2023', '9/2/2023', '9/3/2023', '9/4/2023', '9/5/2023', '9/6/2023', '9/7/2023', '9/8/2023', '9/9/2023', '9/10/2023', '9/11/2023', '9/12/2023', '9/13/2023', '9/14/2023', '9/15/2023', '9/16/2023', '9/17/2023', '9/18/2023', '9/19/2023', '9/20/2023', '9/21/2023', '9/22/2023', '9/23/2023', '9/24/2023', '9/25/2023', '9/26/2023', '9/27/2023', '9/28/2023', '9/29/2023', '9/30/2023', '']
+2024-10-11 00:46:18,240 - INFO - Found plant name column: Plant name
+2024-10-11 00:46:18,240 - ERROR - Required columns not found. Capacity col: None, Plant name col: Plant name
+2024-10-11 00:46:21,756 - INFO - September report email sent successfully
+2024-10-11 00:47:09,602 - INFO - Starting September analysis script...
+2024-10-11 00:47:11,062 - INFO - Email connection test successful
+2024-10-11 00:47:12,350 - INFO - Using worksheet: Sep-23
+2024-10-11 00:47:12,762 - INFO - Available columns: ['S.no.', 'Plant name', '', '', '9/1/2023', '9/2/2023', '9/3/2023', '9/4/2023', '9/5/2023', '9/6/2023', '9/7/2023', '9/8/2023', '9/9/2023', '9/10/2023', '9/11/2023', '9/12/2023', '9/13/2023', '9/14/2023', '9/15/2023', '9/16/2023', '9/17/2023', '9/18/2023', '9/19/2023', '9/20/2023', '9/21/2023', '9/22/2023', '9/23/2023', '9/24/2023', '9/25/2023', '9/26/2023', '9/27/2023', '9/28/2023', '9/29/2023', '9/30/2023', '']
+2024-10-11 00:47:12,764 - INFO - Found plant name column: Plant name
+2024-10-11 00:47:12,765 - ERROR - Required columns not found. Capacity col: None, Plant name col: Plant name
+2024-10-11 00:47:16,886 - INFO - September report email sent successfully
+2024-10-11 00:48:02,267 - INFO - Starting September analysis script...
+2024-10-11 00:48:03,741 - INFO - Email connection test successful
+2024-10-11 00:48:05,048 - INFO - Using worksheet: Sep-23
+2024-10-11 00:48:05,461 - INFO - Available columns: ['S.no.', 'Plant name', 'Plant capacity in KW', '', '9/1/2023', '9/2/2023', '9/3/2023', '9/4/2023', '9/5/2023', '9/6/2023', '9/7/2023', '9/8/2023', '9/9/2023', '9/10/2023', '9/11/2023', '9/12/2023', '9/13/2023', '9/14/2023', '9/15/2023', '9/16/2023', '9/17/2023', '9/18/2023', '9/19/2023', '9/20/2023', '9/21/2023', '9/22/2023', '9/23/2023', '9/24/2023', '9/25/2023', '9/26/2023', '9/27/2023', '9/28/2023', '9/29/2023', '9/30/2023', '']
+2024-10-11 00:48:05,463 - INFO - Found capacity column: Plant capacity in KW
+2024-10-11 00:48:05,464 - INFO - Found plant name column: Plant name
+2024-10-11 00:48:05,466 - INFO - Successfully retrieved data. Shape: (53, 35)
+2024-10-11 00:48:08,832 - INFO - September report email sent successfully
+2024-10-11 00:49:03,792 - INFO - Starting script and running initial tests...
+2024-10-11 00:49:03,793 - INFO - Using date format: 10/11/2024
+2024-10-11 00:49:05,274 - INFO - Email connection test successful
+2024-10-11 00:49:05,489 - INFO - Script is running. Press Ctrl+C to stop.
+2024-10-11 00:49:16,692 - INFO - 
+Script stopped by user

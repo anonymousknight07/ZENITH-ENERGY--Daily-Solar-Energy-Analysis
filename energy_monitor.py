@@ -53,6 +53,18 @@ except ValueError as e:
     logging.error(f"Configuration error: {e}")
     exit(1)
 
+def normalize_column_name(col_name):
+    """Normalize column names by removing extra spaces and converting to lowercase"""
+    return re.sub(r'\s+', ' ', col_name).strip()
+
+def find_column_by_pattern(df, pattern):
+    """Find a column that matches a given pattern"""
+    pattern = re.compile(pattern, re.IGNORECASE)
+    for col in df.columns:
+        if pattern.search(normalize_column_name(col)):
+            return col
+    return None
+
 def find_latest_month_worksheet(worksheets):
     month_pattern = re.compile(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-\d{2}$')
     
@@ -117,7 +129,7 @@ def get_google_sheet_data():
         
         if not latest_month:
             logging.error("No valid month worksheets found")
-            return None
+            return None, None, None
         
         logging.info(f"Using worksheet: {latest_month}")
         worksheet = spreadsheet.worksheet(latest_month)
@@ -125,25 +137,63 @@ def get_google_sheet_data():
         # Get all values
         data = worksheet.get_all_values()
         
+        if not data:
+            logging.error("No data found in the worksheet")
+            return None, None, None
+
         # Convert to pandas DataFrame
         df = pd.DataFrame(data[1:], columns=data[0])
         
-        # Clean up column names and data
-        df.columns = [col.strip() for col in df.columns]
+        # Log all column names for debugging
+        logging.info(f"Available columns: {list(df.columns)}")
+        
+        # Find the plant capacity column - try different patterns
+        capacity_patterns = [
+            r'plant capacity.*kw',
+            r'capacity.*kw',
+            r'.*capacity.*kw',
+            r'.*kw'
+        ]
+        
+        capacity_col = None
+        for pattern in capacity_patterns:
+            capacity_col = find_column_by_pattern(df, pattern)
+            if capacity_col:
+                logging.info(f"Found capacity column: {capacity_col}")
+                break
+        
+        # Find the plant name column
+        plant_name_patterns = [
+            r'plant name',
+            r'name',
+            r'plant'
+        ]
+        
+        plant_name_col = None
+        for pattern in plant_name_patterns:
+            plant_name_col = find_column_by_pattern(df, pattern)
+            if plant_name_col:
+                logging.info(f"Found plant name column: {plant_name_col}")
+                break
+        
+        if not capacity_col or not plant_name_col:
+            raise ValueError(f"Required columns not found. Capacity col: {capacity_col}, Plant name col: {plant_name_col}")
         
         # Convert capacity column to numeric
-        df['Plant capacity in KW'] = pd.to_numeric(df['Plant capacity in KW'], errors='coerce')
+        df[capacity_col] = pd.to_numeric(df[capacity_col], errors='coerce')
         
         # Convert date columns to numeric
-        date_columns = [col for col in df.columns if any(c.isdigit() for c in col)]
+        date_pattern = re.compile(r'\d{1,2}/\d{1,2}/\d{4}')
+        date_columns = [col for col in df.columns if date_pattern.match(col)]
         for col in date_columns:
             df[col] = pd.to_numeric(df[col], errors='coerce')
         
         logging.info(f"Successfully retrieved data. Shape: {df.shape}")
-        return df
+        return df, capacity_col, plant_name_col
+    
     except Exception as e:
         logging.error(f"Error getting Google Sheet data: {e}")
-        return None
+        return None, None, None
 
 def send_email(low_generation_sites, date):
     msg = MIMEMultipart()
@@ -153,15 +203,14 @@ def send_email(low_generation_sites, date):
         msg['Cc'] = CC_EMAIL
     msg['Subject'] = f"Low Energy Generation Report - {date}"
     
-    if isinstance(low_generation_sites, list):
-        if low_generation_sites:
-            body = f"The following sites have lower than expected energy generation for {date}:\n\n"
-            for site, capacity, actual in low_generation_sites:
-                body += f"- {site}: Generated {actual:.2f} kWh (Capacity: {capacity} kW)\n"
-        else:
-            body = f"All sites are generating sufficient energy for {date}"
-    else:
+    if isinstance(low_generation_sites, str):
         body = f"Error in analysis: {low_generation_sites}"
+    elif low_generation_sites:
+        body = f"The following sites have lower than expected energy generation for {date}:\n\n"
+        for site, capacity, actual in low_generation_sites:
+            body += f"- {site}: Generated {actual:.2f} kWh (Capacity: {capacity} kW)\n"
+    else:
+        body = f"All sites are generating sufficient energy for {date}"
     
     msg.attach(MIMEText(body, 'plain'))
     
@@ -187,12 +236,13 @@ def send_email(low_generation_sites, date):
 
 def analyze_energy_generation():
     try:
-        df = get_google_sheet_data()
-        
-        if df is None:
+        result = get_google_sheet_data()
+        if result[0] is None:
             return "Failed to retrieve data from Google Sheet"
         
-        today = datetime.now().strftime("%-m/%-d/%Y")
+        df, capacity_col, plant_name_col = result
+        
+        today = get_today_format()
         logging.info(f"Analyzing data for date: {today}")
         
         if today not in df.columns:
@@ -202,23 +252,34 @@ def analyze_energy_generation():
         low_generation_sites = []
         
         for index, row in df.iterrows():
-            plant_name = row['Plant name']
-            plant_capacity = row['Plant capacity in KW']
+            plant_name = row[plant_name_col]
+            plant_capacity = row[capacity_col]
             
             if pd.isna(plant_name) or pd.isna(plant_capacity):
                 continue
                 
             today_generation = row[today]
             
-            if pd.notna(today_generation) and today_generation < (3 * plant_capacity):
-                low_generation_sites.append((plant_name, plant_capacity, today_generation))
+            if pd.notna(today_generation) and float(today_generation) < (3 * float(plant_capacity)):
+                low_generation_sites.append((plant_name, plant_capacity, float(today_generation)))
         
         logging.info(f"Analysis complete. Found {len(low_generation_sites)} low generation sites")
         return low_generation_sites
         
     except Exception as e:
         logging.error(f"Error during analysis: {str(e)}")
+        import traceback
+        logging.error(f"Traceback: {traceback.format_exc()}")
         return f"Error during analysis: {str(e)}"
+
+
+def get_today_format():
+    """Get today's date in the format that matches the spreadsheet"""
+    today = datetime.now()
+    day = today.day
+    # Format the date as 'MM/D/YYYY' for single digit days or 'MM/DD/YYYY' for double digit days
+    return f"{today.month}/{day}/{today.year}"
+
 
 def should_run_job():
     current_time = datetime.now()
@@ -227,14 +288,20 @@ def should_run_job():
 
 def job():
     if should_run_job():
+        current_date = get_today_format()
         logging.info(f"Running analysis at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         result = analyze_energy_generation()
-        send_email(result, datetime.now().strftime("%Y-%m-%d"))
+        send_email(result, current_date)
     else:
         logging.info("Not yet 7:00 PM, skipping job")
-
+        
+        
 if __name__ == "__main__":
     logging.info("Starting script and running initial tests...")
+    
+    # Test date formatting
+    test_date = get_today_format()
+    logging.info(f"Using date format: {test_date}")
     
     # Run initial tests
     test_email_connection()
